@@ -1,8 +1,9 @@
 const Main = () => {
-    return (
-        <section className='main'>  
-            <section className='contents_con'>
-            </section>
+    return (  
+        <section className="main">
+            <span>
+                FRONT-END DEV.
+            </span>
         </section>
     );
 };

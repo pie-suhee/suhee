@@ -7,12 +7,12 @@ import './main.scss';
 function App() {
   return (
     <BrowserRouter>
-      <main className="App">
         <Header />
-        <Routes>
-          <Route path='/' element={<Main />} />
-        </Routes>
-      </main>
+        <main>
+          <Routes>
+            <Route path='/' element={<Main />} />
+          </Routes>
+        </main>
     </BrowserRouter>
   );
 }
