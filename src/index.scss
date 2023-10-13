@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Thesignature Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Thesignature Regular'), url('Thesignature-OVx16.woff') format('woff');
+}
+
+@import url('https://fonts.cdnfonts.com/css/druk-trial');
+
+/* 
+  font-family: 'Druk Trial', sans-serif;
+  font-family: 'Druk Text Trial', sans-serif;
+  font-family: 'Druk Text Wide Trial', sans-serif;
+  font-family: 'Druk Wide Trial', sans-serif;
+  font-family: 'Druk Cond Trial', sans-serif;
+  font-family: 'Druk XCond Trial', sans-serif;
+  font-family: 'Druk XXCond Trial', sans-serif; 
+*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
