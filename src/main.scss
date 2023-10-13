@@ -17,9 +17,11 @@ header {
             font-size: 50px;
         }
     }
+
     .contact {
         padding-right: 27px;
     }
+
     .menu-icon {
         display: flex;
         flex-direction: column;
@@ -31,10 +33,27 @@ header {
         }
         .menu-line-1 {
             width: 40px;
+            transition: width 0.1s 0.1s linear, transform 0.1s linear;
         }
         .menu-line-2 {
             width: 25px;
             margin-top: 5px;
+            transition: width 0.1s 0.1s linear, transform 0.1s linear;
+        }
+        &.open {
+            .menu-line {
+                width: 30px;
+                transition: width 0.1s linear;
+            }
+            .menu-line-1 {
+                transform: rotate(45deg);
+                transition: transform 0.1s 0.1s linear;
+            }
+            .menu-line-2 {
+                margin-top: -2px;
+                transform: rotate(-45deg);
+                transition: transform 0.1s 0.1s linear;
+            }
         }
     }
 }
@@ -46,17 +65,28 @@ header {
     width: 100%;
     border-radius: 50%;
     position: fixed;
-    top: 0;
+    top: -70%;
     left: 0;
     opacity: 0;
     z-index: 1;
     &.open {
         height: 100vh;
         background-color: #000000;
+        border-radius: 0;
+        top: 0;
         opacity: 1;
+        transition: top 0.3s 0.1s linear, opacity 0.3s linear, border-radius 0.3s 0.1s linear;
         ul {
             li {
-                color: #ffffff;
+                margin-top: 20px;
+                a {
+                    font-size: 60px;
+                    color: #ffffff;
+                    transition: color 0.3s 0.8s cubic-bezier(0.47, 0, 0.745, 0.715);
+                }
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
             }
         }
     }
