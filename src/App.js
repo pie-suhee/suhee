@@ -3,7 +3,7 @@ import Main from './views/Main';
 import About from './views/About';
 import Header from './components/Header';
 
-import './main.scss';
+import './scss/common.scss';
 
 function App() {
   return (

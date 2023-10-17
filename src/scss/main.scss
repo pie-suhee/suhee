@@ -1,0 +1,29 @@
+body {
+  overflow: hidden;
+}
+
+.main {
+    height: 100%;
+    .mainBg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        span {
+            font-size: 150px;
+            line-height: 0.9;
+        }
+    }
+    .image {
+        width: 20vmin;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        &[data-status="inactive"] {
+            display: none;
+        }
+        &[data-status="active"] {
+            display: block;
+        }
+    }
+}

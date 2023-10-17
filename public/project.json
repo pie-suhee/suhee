@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "React Shop",
+        "category": "responsiveWeb"
+    },
+    {
+        "id": 2,
+        "title": "Video App",
+        "category": "responsiveWeb"
+    }
+]
