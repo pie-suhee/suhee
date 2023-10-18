@@ -27,7 +27,7 @@ const Header = () => {
                 </div>
 
                 <div className="contact">
-                    <Link to="/" className="Thesignature" onClick={sideMenu}>
+                    <Link to="/contact" className="Thesignature" onClick={sideMenu}>
                         contact
                     </Link>
                 </div>
@@ -41,17 +41,17 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" onClick={toggleMenu}>
+                        <Link to="/responsiveWeb" onClick={toggleMenu}>
                             RESPONSIVE WEB
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" onClick={toggleMenu}>
+                        <Link to="/javascript" onClick={toggleMenu}>
                             JAVASCRIPT
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" onClick={toggleMenu}>
+                        <Link to="/contact" onClick={toggleMenu}>
                             CONTACT
                         </Link>
                     </li>

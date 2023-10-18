@@ -1,4 +1,5 @@
 import MouseMove from "../components/MouseMove";
+import { Link } from 'react-router-dom';
 
 import '../scss/main.scss'; 
 
@@ -13,6 +14,8 @@ const Main = () => {
             </div>
 
             <MouseMove />
+
+            <Link to="/about" className="btn"></Link>
         </section>
     );
 };

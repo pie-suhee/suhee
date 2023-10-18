@@ -2,11 +2,33 @@
     {
         "id": 1,
         "title": "React Shop",
-        "category": "responsiveWeb"
+        "category": "responsiveWeb",
+        "description": "fakeshop api를 이용하여 카테고리에 맞는 상품이 보여질 수 있게 구현하였습니다. 상품을 장바구니에 넣으면 장바구니 페이지에서 해당 상품의 데이터를 끌어와 개수를 조절하여 구매할 수 있습니다.",
+        "src": "/listBg/reactshopBg.jpeg",
+        "href": "https://pie-suhee.github.io/2023PJ-reactshop/"
     },
     {
         "id": 2,
         "title": "Video App",
-        "category": "responsiveWeb"
+        "category": "responsiveWeb",
+        "description": "fakeshop api를 이용하여 카테고리에 맞는 상품이 보여질 수 있게 구현하였습니다. 상품을 장바구니에 넣으면 장바구니 페이지에서 해당 상품의 데이터를 끌어와 개수를 조절하여 구매할 수 있습니다.",
+        "src": "/listBg/reactshopBg.jpeg",
+        "href": "http://18.222.143.17/"
+    },
+    {
+        "id": 3,
+        "title": "Video App",
+        "category": "responsiveWeb",
+        "description": "fakeshop api를 이용하여 카테고리에 맞는 상품이 보여질 수 있게 구현하였습니다. 상품을 장바구니에 넣으면 장바구니 페이지에서 해당 상품의 데이터를 끌어와 개수를 조절하여 구매할 수 있습니다.",
+        "src": "/listBg/reactshopBg.jpeg",
+        "href": "https://pie-suhee.github.io/2023PJ-reactshop/"
+    },
+    {
+        "id": 4,
+        "title": "React Shop",
+        "category": "javascript",
+        "description": "fakeshop api를 이용하여 카테고리에 맞는 상품이 보여질 수 있게 구현하였습니다. 상품을 장바구니에 넣으면 장바구니 페이지에서 해당 상품의 데이터를 끌어와 개수를 조절하여 구매할 수 있습니다.",
+        "src": "/listBg/reactshopBg.jpeg",
+        "href": "https://pie-suhee.github.io/2023PJ-reactshop/"
     }
 ]
