@@ -21,28 +21,38 @@ const List = ({ category }) => {
 
     return (
         <section className="list">
+            <div className="category">
+                <span>{category}</span>
+            </div>
             <div className="list_con">
                 <ul>
-                    {projects.map((project) => (
-                        <li key={project.id}>
-                            <div className="listBg">
-                                <img src={project.src} alt="리스트 배경 이미지"/>
-                            </div>
-                            <a href={project.href} target='_blank' rel="noreferrer">
-                                <div className="listTitle">
-                                    <span className="Thesignature">
-                                        {project.title}
-                                    </span>
-                                </div>
+                    {projects.map((project, index) => {
+                        const formattedIndex = (index + 1).toString().padStart(2, '0');
 
-                                <div className="listDescription">
-                                    <span className="inter">
-                                        {project.description}
-                                    </span>
+                        return (
+                            <li key={project.id}>
+                                <div className="listBg">
+                                    <img src={project.src} alt="리스트 배경 이미지"/>
                                 </div>
-                            </a>
-                        </li>
-                    ))}
+                                <a href={project.href} target='_blank' rel="noreferrer">
+                                    <div className="listTitle">
+                                        <span className="inter">
+                                            {project.title}
+                                        </span>
+                                        <span className="inter">
+                                            /{formattedIndex}
+                                        </span>
+                                    </div>
+
+                                    <div className="listDescription">
+                                        <span className="inter">
+                                            {project.description}
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         </section>

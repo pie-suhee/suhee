@@ -16,8 +16,8 @@ function App() {
             <Route path='/' element={<Main />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/responsiveWeb' element={<List category='responsiveWeb' />} />
-            <Route path='/javascript' element={<List category='javascript' />} />
+            <Route path='/responsiveWeb' element={<List category='RESPONSIVE WEB' />} />
+            <Route path='/javascript' element={<List category='JAVASCRIPT' />} />
           </Routes>
         </main>
     </BrowserRouter>

@@ -1,6 +1,19 @@
 .list {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
+    .category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - 70px);
+        span {
+            font-size: 150px;
+            line-height: 0.9;
+            position: sticky;
+            top: 150px;
+        }
+    }
     .list_con { 
         margin-top: 100px;    
         ul {
@@ -9,7 +22,7 @@
             li {
                 flex-basis: 33.33%;
                 aspect-ratio: 16 / 9;
-                padding: 0 20px;
+                padding: 20px;
                 border-left: 1px solid #999999;
                 border-bottom: 1px solid #999999;
                 position: relative;
@@ -42,13 +55,16 @@
                 a {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: space-between;
                     width: 100%;
                     height: 100%;
                     position: relative;
                     .listTitle {
+                        display: flex;
+                        justify-content: space-between;
                         span {
-                            font-size: 4dvh;
+                            font-size: 24px;
+                            font-weight: 600;
                         }
                     }
                     .listDescription {

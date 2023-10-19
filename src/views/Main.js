@@ -1,9 +1,17 @@
+import React, { useEffect } from 'react';
 import MouseMove from "../components/MouseMove";
 import { Link } from 'react-router-dom';
 
 import '../scss/main.scss'; 
 
 const Main = () => {
+    useEffect(() => {
+        document.body.className = 'main_page';
+        return () => {
+          document.body.className = '';
+        };
+    }, []);
+
     return (  
         <section className="main">
             <div className="mainBg">
