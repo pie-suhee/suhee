@@ -17,18 +17,58 @@
     },
     {
         "id": 3,
-        "title": "Video App",
+        "title": "BCD",
         "category": "RESPONSIVE WEB",
-        "description": "fakeshop api를 이용하여 카테고리에 맞는 상품이 보여질 수 있게 구현하였습니다. 상품을 장바구니에 넣으면 장바구니 페이지에서 해당 상품의 데이터를 끌어와 개수를 조절하여 구매할 수 있습니다.",
-        "src": "/listBg/reactshopBg.jpeg",
-        "href": "https://pie-suhee.github.io/2023PJ-reactshop/"
+        "description": "반응형 랜딩페이지입니다. javascript와 jquery로 만들었으며 화면의 크기가 달라져도 자연스럽게 위치가 변경될 수 있도록 노력했습니다.",
+        "src": "/listBg/bcdBg.png",
+        "href": "https://pie-suhee.github.io/portfolio/bcd/"
     },
     {
         "id": 4,
-        "title": "React Shop",
+        "title": "KCLS",
+        "category": "RESPONSIVE WEB",
+        "description": "반응형 랜딩페이지입니다. javascript와 jquery로 만들었으며 swiper슬라이드를 반응형으로 구현하였습니다.",
+        "src": "/listBg/kclsBg.png",
+        "href": "https://pie-suhee.github.io/portfolio/ekcls/"
+    },
+    {
+        "id": 5,
+        "title": "PFSB",
+        "category": "RESPONSIVE WEB",
+        "description": "반응형 웹 사이트입니다. javascript와 jquery로 만들었으며 서브 페이지 모두 구현하였습니다.",
+        "src": "/listBg/exBg.png",
+        "href": "http://pfsb.co.kr/"
+    },
+    {
+        "id": 6,
+        "title": "Toggle side nav",
         "category": "JAVASCRIPT",
-        "description": "fakeshop api를 이용하여 카테고리에 맞는 상품이 보여질 수 있게 구현하였습니다. 상품을 장바구니에 넣으면 장바구니 페이지에서 해당 상품의 데이터를 끌어와 개수를 조절하여 구매할 수 있습니다.",
-        "src": "/listBg/reactshopBg.jpeg",
-        "href": "https://pie-suhee.github.io/2023PJ-reactshop/"
+        "description": "api와 plugin을 사용하지 않은 순수 javascript 작업물입니다. localstorage를 이용하여 toggle의 상태를 저장할 수 있도록 구현하였습니다.",
+        "src": "/listBg/exBg.png",
+        "href": "https://pie-suhee.github.io/portfolio/boot/1_toggle-side-nav/"
+    },
+    {
+        "id": 7,
+        "title": "Analog clock",
+        "category": "JAVASCRIPT",
+        "description": "api와 plugin을 사용하지 않은 순수 javascript 작업물입니다. 실시간으로 움직이는 시계를 컴포넌트화하여 구현하였습니다.",
+        "src": "/listBg/exBg.png",
+        "href": "https://pie-suhee.github.io/portfolio/boot/2_analog-clock/"
+    },
+    {
+        "id": 8,
+        "title": "Star rating",
+        "category": "JAVASCRIPT",
+        "description": "api와 plugin을 사용하지 않은 순수 javascript 작업물입니다. 별점을 부여할 수 있도록 컴포넌트화하여 구현하였습니다.",
+        "src": "/listBg/exBg.png",
+        "href": "https://pie-suhee.github.io/portfolio/boot/3_star-rating/"
+    },
+    {
+        "id": 9,
+        "title": "Date Picker",
+        "category": "JAVASCRIPT",
+        "description": "api와 plugin을 사용하지 않은 순수 javascript 작업물입니다. 달력에서 날짜를 선택할 수 있도록 컴포넌트화하여 구현하였습니다.",
+        "src": "/listBg/exBg.png",
+        "href": "https://pie-suhee.github.io/portfolio/boot/4_calendar&datepicker/"
     }
 ]
