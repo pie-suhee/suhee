@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../scss/list.scss';
 
 const projectURL = '/project.json';
@@ -19,12 +20,26 @@ const List = ({ category }) => {
             });
     }, [category]);
 
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+
     return (
         <section className="list">
             <div className="category">
-                <span>{category}</span>
+                <div className="subTitle">
+                    <span className="text">{category}</span>
+                    <span className="scroll">
+                        scroll down 👇
+                    </span>
+                </div>
             </div>
             <div className="list_con">
+                <div className="cityBg">
+                    <img src="/cityBg.png" alt="도시 이미지"/>
+                </div>
                 <ul>
                     {projects.map((project, index) => {
                         const formattedIndex = (index + 1).toString().padStart(2, '0');

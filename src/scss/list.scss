@@ -7,15 +7,31 @@
         align-items: center;
         width: 100%;
         height: calc(100vh - 70px);
-        span {
-            font-size: 150px;
-            line-height: 0.9;
+        .subTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             position: sticky;
             top: 170px;
+            .text {
+                font-size: 150px;
+                line-height: 0.9;
+            }
+            .scroll{
+                padding-top: 40px;
+                font-size: 30px;
+            }
         }
     }
     .list_con { 
-        padding: 100px 0;    
+        padding: 100px 0;
+        .cityBg {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }   
         ul {
             display: flex;
             flex-wrap: wrap;

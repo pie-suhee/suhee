@@ -8,9 +8,10 @@ header {
     background-color: #eaeaea;
     border-bottom: 1px solid #999999;
     box-sizing: border-box;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 20000;
-    .logo,.contact {
+    .logoBtn,.contactBtn {
         a {
             display: block;
             margin-top: 15px;
@@ -18,7 +19,7 @@ header {
         }
     }
 
-    .contact {
+    .contactBtn {
         padding-right: 27px;
     }
 

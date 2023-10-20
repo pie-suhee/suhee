@@ -1,9 +1,13 @@
+import '../scss/contact.scss';
+
 const Contact = () => {
     return (  
         <section className="contact">
-            <span>
-                Contact
-            </span>
+            <div className="subTitle">
+                <span>
+                    CONTACT
+                </span>
+            </div>
         </section>
     );
 };

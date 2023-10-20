@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -8,6 +8,18 @@ const Header = () => {
         setMenuOpen(!menuOpen);
     };
 
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.classList.add('main_page');
+        } else {
+            document.body.classList.remove('main_page');
+        }
+
+        return () => {
+            document.body.classList.remove('main_page');
+        };
+    }, [menuOpen]);
+
     const sideMenu = () => {
         setMenuOpen(false);
     }
@@ -15,7 +27,7 @@ const Header = () => {
     return (
         <>
             <header>
-                <div className="logo">
+                <div className="logoBtn">
                     <Link to="/" className="Thesignature" onClick={sideMenu}>
                         suhee
                     </Link>
@@ -26,7 +38,7 @@ const Header = () => {
                     <div className="menu-line menu-line-2"></div>
                 </div>
 
-                <div className="contact">
+                <div className="contactBtn">
                     <Link to="/contact" className="Thesignature" onClick={sideMenu}>
                         contact
                     </Link>
