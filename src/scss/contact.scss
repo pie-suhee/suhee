@@ -3,12 +3,11 @@
     margin: 0 auto;
     .subTitle {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: calc(100vh - 70px);
-        span {
+        .spell {
             font-size: 150px;
             line-height: 0.9;
         }
