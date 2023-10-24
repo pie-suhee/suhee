@@ -39,7 +39,7 @@ const Header = () => {
                 </div>
 
                 <div className="contactBtn">
-                    <Link to="/contact" className="Thesignature" onClick={sideMenu}>
+                    <Link to="/*" className="Thesignature" onClick={sideMenu}>
                         contact
                     </Link>
                 </div>
@@ -48,7 +48,7 @@ const Header = () => {
             <div className={`menu ${menuOpen ? 'open' : ''}`}>
                 <ul>
                     <li>
-                        <Link to="/about" onClick={toggleMenu}>
+                        <Link to="/*" onClick={toggleMenu}>
                             ABOUT
                         </Link>
                     </li>
@@ -63,7 +63,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/contact" onClick={toggleMenu}>
+                        <Link to="/*" onClick={toggleMenu}>
                             CONTACT
                         </Link>
                     </li>

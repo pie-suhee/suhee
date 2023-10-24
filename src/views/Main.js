@@ -23,7 +23,7 @@ const Main = () => {
 
             <MouseMove />
 
-            <Link to="/about" className="btn"></Link>
+            <Link to="/*" className="btn"></Link>
         </section>
     );
 };

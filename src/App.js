@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Error from './views/Error';
 import Main from './views/Main';
 import About from './views/About';
 import Contact from './views/Contact';
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <main>
           <Routes>
+            <Route path='*' element={<Error />} />
             <Route path='/' element={<Main />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
