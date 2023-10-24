@@ -1,3 +1,11 @@
+$rotationDuration: 20s;
+$hoverDuration: 0.3s;
+
+$easeIn: cubic-bezier(0.32, 0, 0.67, 0);
+$easeOut: cubic-bezier(0.33, 1, 0.68, 1);
+
+$textColor: #2B3338;
+
 .main_page {
     overflow: hidden;
 }
@@ -31,49 +39,61 @@
     }
 
     .btn {
-        width: 100px;
-        aspect-ratio: 1 / 1;
-        background-color: #eaeaea;
-        border: 3px solid #000000;
-        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        display: inline-block;
+        font-size: 1.55rem;
+        line-height: 1.4;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.1175em;
+        word-spacing: 0.3em;
+        text-decoration: none;
         position: absolute;
         bottom: 3%;
         right: 3%;
         z-index: 10000;
-        &:hover {
-            border: 3px dashed #000000;
-            animation: rotate360 10s linear infinite;
-            transform-origin: 50% 50%;
-            &::after {
-                content: 'ABOUT';
-                font-size: 35px;
-                line-height: 95px;
-                animation: rotate-360 10s linear infinite;
+        .link__svg {
+            width: 100%;
+            height: auto;
+            transform-box: fill-box;
+            fill: $textColor;
+            stroke: $textColor;
+            stroke-width: 0.05em;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            .link__arrow {
+                text-shadow: 4px 4px 2px #ffffff;
+                transform-origin: 50% 50%;
+                transition: transform $hoverDuration / 2 $easeIn;
+            }
+            .link__text {
+                text-shadow: 1px 2px 2px #ffffff;
+                animation: rotateReverse normal infinite $rotationDuration linear;
+                transform-origin: 50% 50%;
             }
         }
-        &::after {
-            content: '›';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-size: 100px;
-            font-weight: bold;
-            line-height: 70px;
-            text-align: center;
+
+        &:hover {
+            .link__arrow {
+                transform: scale(1.1);
+                transition: transform $hoverDuration $easeOut;
+            }
+            .link__text {
+                animation-play-state: paused;
+            }
         }
     }
 }
 
-@keyframes rotate360{
-	100% {
+@keyframes rotate {
+	to {
     	transform: rotate(360deg);
     }
 }
 
-@keyframes rotate-360{
-	100% {
+@keyframes rotateReverse {
+	to {
     	transform: rotate(-360deg);
     }
 }

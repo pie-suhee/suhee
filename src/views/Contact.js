@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../scss/contact.scss';
 
 const Contact = () => {
@@ -11,7 +11,9 @@ const Contact = () => {
                     <span 
                         id={`spell${index}`}
                         className="spell"
-                    >{letter}</span>
+                    >
+                        {letter}
+                    </span>
                 ))}
             </div>
         </section>
