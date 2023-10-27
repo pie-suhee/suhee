@@ -39,7 +39,7 @@ const Header = () => {
                 </div>
 
                 <div className="contactBtn">
-                    <Link to="/*" className="Thesignature" onClick={sideMenu}>
+                    <Link to="/contact" className="Thesignature" onClick={sideMenu}>
                         contact
                     </Link>
                 </div>
@@ -63,7 +63,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/*" onClick={toggleMenu}>
+                        <Link to="/contact" onClick={toggleMenu}>
                             CONTACT
                         </Link>
                     </li>

@@ -3,7 +3,7 @@
         "id": 1,
         "title": "React Shop",
         "category": "RESPONSIVE WEB",
-        "description": "fakeshop api를 이용하여 카테고리에 맞는 상품이 보여질 수 있게 구현하였습니다. 상품을 장바구니에 넣으면 장바구니 페이지에서 해당 상품의 데이터를 끌어와 개수를 조절하여 구매할 수 있습니다.",
+        "description": "typescript로 만들었으며 fakeshop api를 이용하여 카테고리에 맞는 상품이 보여질 수 있게 구현하였습니다. 상품을 장바구니에 넣으면 장바구니 페이지에서 해당 상품의 데이터를 끌어와 개수를 조절하여 구매할 수 있습니다.",
         "src": "/listBg/reactshopBg.jpeg",
         "href": "https://pie-suhee.github.io/2023PJ-reactshop/"
     },
