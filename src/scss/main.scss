@@ -23,6 +23,12 @@ $textColor: #2B3338;
             font-size: 150px;
             line-height: 0.9;
             text-shadow: 4px 4px 2px #ffffff;
+            .mainText2 {
+                letter-spacing: 30px;
+            }
+            .mainText3 {
+                letter-spacing: 19px;
+            }
         }
     }
 
@@ -37,63 +43,22 @@ $textColor: #2B3338;
             display: block;
         }
     }
+}
 
-    .btn {
-        width: 10rem;
-        height: 10rem;
-        display: inline-block;
-        font-size: 1.55rem;
-        line-height: 1.4;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 0.1175em;
-        word-spacing: 0.3em;
-        text-decoration: none;
-        position: absolute;
-        bottom: 3%;
-        right: 3%;
-        z-index: 10000;
-        .link__svg {
-            width: 100%;
-            height: auto;
-            transform-box: fill-box;
-            fill: $textColor;
-            stroke: $textColor;
-            stroke-width: 0.05em;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            .link__arrow {
+@media screen and (max-width: 768px) {
+    .main {
+        .mainBg{
+            span {
+                font-size: 56px;
+                line-height: 0.9;
                 text-shadow: 4px 4px 2px #ffffff;
-                transform-origin: 50% 50%;
-                transition: transform $hoverDuration / 2 $easeIn;
-            }
-            .link__text {
-                text-shadow: 1px 2px 2px #ffffff;
-                animation: rotateReverse normal infinite $rotationDuration linear;
-                transform-origin: 50% 50%;
-            }
-        }
-
-        &:hover {
-            .link__arrow {
-                transform: scale(1.1);
-                transition: transform $hoverDuration $easeOut;
-            }
-            .link__text {
-                animation-play-state: paused;
+                .mainText2 {
+                    letter-spacing: 11.5px;
+                }
+                .mainText3 {
+                    letter-spacing: 7px;
+                }
             }
         }
-    }
-}
-
-@keyframes rotate {
-	to {
-    	transform: rotate(360deg);
-    }
-}
-
-@keyframes rotateReverse {
-	to {
-    	transform: rotate(-360deg);
     }
 }

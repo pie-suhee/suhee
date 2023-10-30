@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../scss/contact.scss';
 
 const Contact = () => {
     const [activeItem, setActiveItem] = useState(null);
