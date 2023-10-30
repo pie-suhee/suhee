@@ -11,9 +11,9 @@
         "id": 2,
         "title": "Video App",
         "category": "RESPONSIVE WEB",
-        "description": "회원가입, 로그인, 동영상 업로드, 댓글, 좋아요, 구독 등의 기능을 구현하였으며, MongoDB, Postman을 활용하여 RESTful API 요청 메서드(GET, POST 등)의 흐름을 확인하였습니다.",
+        "description": "현재 프리티어 사용량이 초과되어 github코드로 이동합니다. 회원가입, 로그인, 동영상 업로드, 댓글, 좋아요, 구독 등의 기능을 구현하였으며, MongoDB, Postman을 활용하여 RESTful API 요청 메서드(GET, POST 등)의 흐름을 확인하였습니다.",
         "src": "/listBg/videoappBg.png",
-        "href": "http://18.222.143.17/"
+        "href": "https://github.com/pie-suhee/portfolio/tree/main/videoapp"
     },
     {
         "id": 3,
