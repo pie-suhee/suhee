@@ -67,6 +67,9 @@ header {
     left: 0;
     opacity: 0;
     z-index: 11000;
+    .menuLeft, .menuRight {
+        display: none;
+    }
     &.open {
         display: flex;
         justify-content: space-between;
@@ -79,6 +82,7 @@ header {
         opacity: 1;
         transition: top 0.3s 0.1s linear, opacity 0.3s linear, border-radius 0.3s 0.1s linear;
         .menuLeft {
+            display: block;
             ul {
                 display: flex;
                 flex-direction: column;
@@ -100,6 +104,7 @@ header {
             }
         }
         .menuRight {
+            display: block;
             width: 495px;
             ul{
                 display: flex;

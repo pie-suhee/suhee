@@ -137,6 +137,16 @@ const About = () => {
                         <img src="/about/imsuhee.png" alt="임수희 사진" />
                     </div>
                 </div>
+                <div className="greetings">
+                    <span className="inter">
+                        안녕하세요. :) <br />
+                        React 기반의 프론트엔드 개발자 임수희입니다. <br />
+                        Figma (Zeplin) 와 Adobe Photoshop을 활용하여
+                        디자이너와 원활하게 소통하고
+                        TeamUP과 Slack과 같은 협업 도구를 이용하여
+                        프로젝트에 소통 부재로 인한 오류사항이 없도록 노력하겠습니다.
+                    </span>
+                </div>
             </section>
         </section>
     );
