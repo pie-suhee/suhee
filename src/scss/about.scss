@@ -79,9 +79,39 @@
     }
     .greetings {
       span {
+        font-size: 23px;
+        line-height: 1.5;
+        font-weight: 500;
         word-spacing: keep-all;
       }
     }
   }
 }
-  
+
+@media (max-width: 1100px) {
+  .about {
+    .section1 {
+      flex-direction: column;
+      gap: 50px;
+      .greetings {
+        span {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .about {
+    .section1 {
+      gap: 20px;
+      padding: 10%;
+      .greetings {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

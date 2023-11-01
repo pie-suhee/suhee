@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 
 import '../scss/about.scss'; 
@@ -94,7 +94,7 @@ const About = () => {
     const path1Ref = useRef(null);
     const path2Ref = useRef(null);
     const carouselImgRef = useRef(null);
-
+    
     useEffect(() => {
         const blob1 = new SupahBlob({
             el: path1Ref.current,
@@ -108,7 +108,7 @@ const About = () => {
             maskEl: carouselImgRef.current,
             maskID: '#mask'
         });
-
+        
         const blob2 = new SupahBlob({
             el: path2Ref.current, // Change to the appropriate element reference
             segments: 9,
@@ -120,6 +120,27 @@ const About = () => {
             maxDuration: 3
         });
     }, []);
+
+    const completedText = "안녕하세요. :) \n React 기반의 프론트엔드 개발자 임수희입니다. \n Figma (Zeplin) 와 Adobe Photoshop을 활용하여 디자이너와 원활하게 소통하고 TeamUP과 Slack과 같은 협업 도구를 이용하여 프로젝트에 소통부재로 인한 오류사항이 없도록 노력하겠습니다. \n 감사합니다.";
+    const textLines = completedText.split('');
+    
+    const [greetingsText, setGreetingsText] = useState([]);
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (count >= textLines.length) {
+                clearInterval(interval);
+            } else {
+                setGreetingsText((prev) => [...prev, textLines[count]]);
+                setCount((prev) => prev + 1);
+            }
+        }, 100);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, [count]);
 
     return (
         <section className="about">
@@ -139,12 +160,11 @@ const About = () => {
                 </div>
                 <div className="greetings">
                     <span className="inter">
-                        안녕하세요. :) <br />
-                        React 기반의 프론트엔드 개발자 임수희입니다. <br />
-                        Figma (Zeplin) 와 Adobe Photoshop을 활용하여
-                        디자이너와 원활하게 소통하고
-                        TeamUP과 Slack과 같은 협업 도구를 이용하여
-                        프로젝트에 소통 부재로 인한 오류사항이 없도록 노력하겠습니다.
+                        {greetingsText.map((char, index) => (
+                            <React.Fragment key={index}>
+                                {char === '\n' ? <br /> : char}
+                            </React.Fragment>
+                        ))}
                     </span>
                 </div>
             </section>

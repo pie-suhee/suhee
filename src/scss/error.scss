@@ -8,8 +8,9 @@
     height: calc(100vh - 70px);
     .text {
         font-size: 80px;
-        line-height: 0.9;
+        line-height: 1.5;
         font-weight: 600;
+        text-align: center;
     }
     .mainBtn {
         width: 10rem;
@@ -28,6 +29,24 @@
         &:hover {
             background-color: #333333;
             transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+        }
+    }
+}
+
+@media all and (max-width: 555px) {
+    .error {
+        gap: 40px;
+        .text {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+        .mainBtn {
+            a {
+                min-height: 3rem;
+                font-size: 0.875rem;
+                font-weight: 700;
+                line-height: 3rem;
+            }
         }
     }
 }
