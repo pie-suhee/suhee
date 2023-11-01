@@ -60,105 +60,109 @@ header {
 }
 
 .menu {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    height: 100vh;
+    padding: calc(70px + 100px) 100px 100px 100px;
+    background-color: #eaeaea;
     border-radius: 50%;
     position: fixed;
-    top: -70%;
     left: 0;
-    opacity: 0;
+    border-radius: 0;
+    box-sizing: border-box;
     z-index: 11000;
-    .menuLeft, .menuRight {
-        display: none;
-    }
-    &.open {
-        display: flex;
-        justify-content: space-between;
-        height: 100vh;
-        padding: calc(70px + 100px) 100px 100px 100px;
-        background-color: #eaeaea;
-        border-radius: 0;
-        box-sizing: border-box;
-        top: 0;
-        opacity: 1;
-        transition: top 0.3s 0.1s linear, opacity 0.3s linear, border-radius 0.3s 0.1s linear;
-        .menuLeft {
-            display: block;
-            ul {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                gap: 50px;
-                li {
-                    a {
-                        text-shadow: -1px 0 $textColor, 0 2px $textColor, 2px 0 $textColor, 0 -1px $textColor;
-                        transition: color 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
-                        font-size: 100px;
-                        color: #eaeaea;
-                        letter-spacing: 6px;
-                        &:hover {
-                            text-shadow: -1px 0 $textColor, 0 1px $textColor, 1px 0 $textColor, 0 -1px $textColor;
-                            color: $textColor;
-                        }
+    .menuLeft {
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 50px;
+            li {
+                a {
+                    text-shadow: -1px 0 $textColor, 0 2px $textColor, 2px 0 $textColor, 0 -1px $textColor;
+                    transition: color 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+                    font-size: 100px;
+                    color: #eaeaea;
+                    letter-spacing: 6px;
+                    &:hover {
+                        text-shadow: -1px 0 $textColor, 0 1px $textColor, 1px 0 $textColor, 0 -1px $textColor;
+                        color: $textColor;
                     }
                 }
             }
         }
-        .menuRight {
-            display: block;
-            width: 495px;
-            ul{
-                display: flex;
-                align-items: flex-end;
-                justify-content: space-between;
-                height: 100%;
-                li {
-                    width: 74px;
-                    aspect-ratio: 1 / 1;
-                    background-color: #eaeaea;
-                    border-radius: 20%;
-                    box-shadow: 4px 4px 4px 4px #d5d5d5, -2px -2px 4px 2px rgba(255, 255, 255, 0.8);
-                    position: relative;
-                    img {
-                        width: 100%;
+    }
+    .menuRight {
+        width: 495px;
+        ul{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 100%;
+            li {
+                width: 74px;
+                aspect-ratio: 1 / 1;
+                background-color: #eaeaea;
+                border-radius: 20%;
+                box-shadow: 4px 4px 4px 4px #d5d5d5, -2px -2px 4px 2px rgba(255, 255, 255, 0.8);
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                &:hover {
+                    &:before {
+                        content: "Click";
+                        display: inline-block;
+                        width: 80px;
+                        aspect-ratio: 1 / 1.2;
+                        background-image: url('../../public/icon/speechBalloonIcon.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        text-align: center;
+                        font-size: 35px;
+                        line-height: 50px;
+                        position: absolute;
+                        bottom: 35%;
+                        left: 70%;
+                        z-index: 100;
                     }
-                    &:hover {
-                        &:before {
-                            content: "Click";
-                            display: inline-block;
-                            width: 80px;
-                            aspect-ratio: 1 / 1.2;
-                            background-image: url('../../public/icon/speechBalloonIcon.png');
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                            text-align: center;
-                            font-size: 35px;
-                            line-height: 50px;
-                            position: absolute;
-                            bottom: 35%;
-                            left: 70%;
-                            z-index: 100;
-                        }
-                    }
-                    &.click {
-                        &:before {
-                            content: "Copied";
-                            display: inline-block;
-                            width: 80px;
-                            aspect-ratio: 1 / 1.2;
-                            background-image: url('../../public/icon/speechBalloonIcon.png');
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                            text-align: center;
-                            font-size: 35px;
-                            line-height: 50px;
-                            position: absolute;
-                            bottom: 35%;
-                            left: 70%;
-                            z-index: 100;
-                        }
+                }
+                &.click {
+                    &:before {
+                        content: "Copied";
+                        display: inline-block;
+                        width: 80px;
+                        aspect-ratio: 1 / 1.2;
+                        background-image: url('../../public/icon/speechBalloonIcon.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        text-align: center;
+                        font-size: 35px;
+                        line-height: 50px;
+                        position: absolute;
+                        bottom: 35%;
+                        left: 70%;
+                        z-index: 100;
                     }
                 }
             }
+        }
+    }
+    &.open {
+        top: 0;
+        opacity: 1;
+        transition: top 0.3s 0.3s linear, opacity 0.3s linear;
+        .menuLeft, .menuRight {
+            display: block;
+        }
+    }
+    &.close {
+        top: -100%;
+        opacity: 0;
+        transition: top 0.3s linear, opacity 0.3s 0.3s linear;
+        .menuLeft, .menuRight {
+            display: none;
         }
     }
 }

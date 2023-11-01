@@ -45,7 +45,7 @@ const Header = () => {
                     </Link>
                 </div>
                 
-                <div className={`menu-icon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                <div className={`menu-icon ${menuOpen ? 'open' : 'close'}`} onClick={toggleMenu}>
                     <div className="menu-line menu-line-1"></div>
                     <div className="menu-line menu-line-2"></div>
                 </div>
@@ -57,7 +57,7 @@ const Header = () => {
                 </div>
             </header>
 
-            <div className={`menu ${menuOpen ? 'open' : ''}`}>
+            <div className={`menu ${menuOpen ? 'open' : 'close'}`}>
                 <div className="menuLeft">
                     <ul>
                         <li>

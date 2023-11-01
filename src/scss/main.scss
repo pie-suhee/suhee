@@ -11,7 +11,7 @@ $textColor: #2B3338;
 }
 
 .main {
-    height: 100%;
+    height: calc(100vh - 70px);
     .mainBg{
         display: flex;
         justify-content: center;
