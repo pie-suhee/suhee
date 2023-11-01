@@ -7,12 +7,9 @@ import Skill from '../components/Skill';
 const About = () => {
     return (
         <section className="about">
-            <section className="section section1">
-                <Greeting />
-            </section>
-            <section className="section section2">
-                <Skill />
-            </section>
+            <Greeting />
+            <Skill />
+            <section className='ex'></section>
         </section>
     );
 };

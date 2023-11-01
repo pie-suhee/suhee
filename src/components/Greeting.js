@@ -142,7 +142,7 @@ const Greeting = () => {
     }, [count]);
 
     return (
-        <>
+        <section className="section section1">
             <div className="carousel">
                 <svg id="blob-1" viewBox="0 0 800 800">
                     <defs>
@@ -165,7 +165,7 @@ const Greeting = () => {
                     ))}
                 </span>
             </div>
-        </>
+        </section>
     )
 }
 
