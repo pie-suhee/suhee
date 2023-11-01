@@ -51,16 +51,16 @@ const List = ({ category }) => {
                                 </div>
                                 <a href={project.href} target='_blank' rel="noreferrer">
                                     <div className="listTitle">
-                                        <span className="inter">
+                                        <span className="bookk">
                                             {project.title}
                                         </span>
-                                        <span className="inter">
+                                        <span className="bookk">
                                             /{formattedIndex}
                                         </span>
                                     </div>
 
                                     <div className="listDescription">
-                                        <span className="inter">
+                                        <span className="bookk">
                                             {project.description}
                                         </span>
                                     </div>
