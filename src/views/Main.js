@@ -12,7 +12,7 @@ const Main = () => {
     }, []);
 
     return (  
-        <section className="main">
+        <section className="page main">
             <div className="mainBg">
                 <span className="mainText">
                     <span className="mainText1">FRONT-END DEV</span> <br />

@@ -27,7 +27,7 @@ const List = ({ category }) => {
     }, [location]);
 
     return (
-        <section className="list">
+        <section className="page list">
             <div className="category">
                 <div className="subTitle">
                     <span className="text">{category}</span>

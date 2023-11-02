@@ -28,8 +28,9 @@
     gap: 100px;
     width: 100%;
     max-width: 1400px;
+    height: calc(100vh - 70px);
     margin: 0 auto;
-    padding: 100px 100px 0 100px;
+    padding: 100px;
     box-sizing: border-box;
     .carousel {
       position: relative;
@@ -88,42 +89,91 @@
     }
   }
   .section2 {
+    display: flex;
     width: 100%;
-    padding: 5% 5% 0 5%;
-    position: relative;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    .skillList {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      box-sizing: border-box;
-      .motion {
+    height: auto;
+    padding-bottom: 100px;
+    .skillLeft {
+      flex: 1;
+      .title {
         display: flex;
-        gap: 5%;
-        padding: 1.5vw;
-        box-sizing: border-box;
-        .icon {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          aspect-ratio: 1 / 1;
-          padding: 1.5vw;
-          border-radius: 20%;
-          box-shadow: 4px 4px 4px 4px #d5d5d5, -2px -2px 4px 2px rgba(255, 255, 255, 0.8);
-          box-sizing: border-box;
-          svg {
-            font-size: 5vw;
-            width: 5vw;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - 70px);
+        text-align: center;
+        position: sticky;
+        top: 70px;
+        span {
+          font-size: 10vw;
+        }
+      }
+    }
+    .skillRight {
+      flex: 1;
+      .list {
+        display: grid;
+        grid-column-gap: 1.2em;
+        grid-row-gap: 1.2em;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: row;
+        .listItem {
+          width: 100%;
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            margin: 0 auto;
+            aspect-ratio: 1 / 1;
+            padding: 1.5vw;
+            border-radius: 20%;
+            box-shadow: 4px 4px 4px 4px #d5d5d5, -2px -2px 4px 2px rgba(255, 255, 255, 0.8);
+            svg {
+              width: 12vw;
+              font-size: 12vw;
+            }
           }
+        }
+
+        .listItem:nth-child(2n) {
+          margin-top: 60%;
+          margin-bottom: -40%;
         }
       }
     }
   }
-  .ex {
-    width: 100%;
-    height: 100vh;
+}
+
+@media (min-width: 1400px) {
+  .about {
+    .section2 {
+      max-width: 1400px;
+      margin: 0 auto;
+      .skillLeft {
+        .title {
+          span {
+            font-size: 130px;
+          }
+        }
+      }
+      .skillRight {
+        .list {
+          .listItem {
+            div {
+              width: 50%;
+              padding: 50px;
+              svg {
+                width: 150px;
+                font-size: 150px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -131,6 +181,7 @@
   .about {
     .section1 {
       flex-direction: column;
+      justify-content: center;
       gap: 50px;
       .greetings {
         span {
@@ -139,7 +190,31 @@
       }
     }
     .section2 {
-      padding: 50px 100px;
+      flex-direction: column;
+      gap: 150px;
+      width: 80%;
+      padding-bottom: 10%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      .skillLeft {
+        .title {
+          height: auto;
+        }
+      }
+      .skillRight {
+        .list {
+          .listItem {
+            div {
+              width: 70%;
+              padding: 2vw;
+              svg {
+                width: 13vw;
+                font-size: 13vw;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -156,7 +231,28 @@
       }
     }
     .section2 {
-      padding: 0 10%;
+      gap: 100px;
+      width: 85%;
+      .skillLeft {
+        .title {
+          span {
+            font-size: 50px;
+          }
+        }
+      }
+      .skillRight {
+        .list {
+          .listItem {
+            div {
+              padding: 1vw;
+              svg {
+                width: 14vw;
+                font-size: 14vw;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -3,13 +3,14 @@ import React from 'react';
 import '../scss/about.scss'; 
 import Greeting from '../components/Greeting';
 import Skill from '../components/Skill';
+import Show from '../components/Show';
 
 const About = () => {
     return (
-        <section className="about">
+        <section className="page about">
             <Greeting />
             <Skill />
-            <section className='ex'></section>
+            <Show />
         </section>
     );
 };

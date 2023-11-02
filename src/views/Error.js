@@ -3,7 +3,7 @@ import '../scss/error.scss';
 
 const Error = () => {
     return (
-        <div className="error">  
+        <div className="page error">  
             <span className="text bookk">페이지 준비중입니다.</span>
             <div className="mainBtn">
                 <Link to="/"  className="bookk">

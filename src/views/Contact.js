@@ -14,7 +14,7 @@ const Contact = () => {
     };
 
     return (  
-        <section className="contact">
+        <section className="page contact">
             <div className="subTitle">
                 <span className="text">
                     CONTACT

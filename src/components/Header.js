@@ -51,7 +51,7 @@ const Header = () => {
                 </div>
 
                 <div className="contactBtn">
-                    <Link to="/*" className="Thesignature" onClick={sideMenu}>
+                    <Link to="/about" className="Thesignature" onClick={sideMenu}>
                         about
                     </Link>
                 </div>
@@ -61,7 +61,7 @@ const Header = () => {
                 <div className="menuLeft">
                     <ul>
                         <li>
-                            <Link to="/*" onClick={toggleMenu}>
+                            <Link to="/about" onClick={toggleMenu}>
                                 ABOUT /
                             </Link>
                         </li>
