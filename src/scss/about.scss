@@ -21,6 +21,7 @@
 }
 
 .about {
+  width: 100%;
   .section1 {
     display: flex;
     align-items: center;
@@ -90,6 +91,8 @@
     width: 100%;
     padding: 5% 5% 0 5%;
     position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
     .skillList {
       display: flex;
       flex-direction: column;
@@ -99,7 +102,8 @@
       .motion {
         display: flex;
         gap: 5%;
-        overflow: hidden;
+        padding: 1.5vw;
+        box-sizing: border-box;
         .icon {
           display: flex;
           justify-content: center;
