@@ -20,14 +20,14 @@ $textColor: #2B3338;
         position: relative;
         z-index: 10000;
         span {
-            font-size: 150px;
-            line-height: 0.9;
+            font-size: 90px;
+            line-height: 1.8;
             text-shadow: 4px 4px 2px #ffffff;
             .mainText2 {
-                letter-spacing: 30px;
+                letter-spacing: 47px;
             }
             .mainText3 {
-                letter-spacing: 19px;
+                letter-spacing: 30px;
             }
         }
     }
@@ -45,18 +45,35 @@ $textColor: #2B3338;
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .main {
+        .mainBg{
+            span {
+                font-size: 55px; 
+                line-height: 1.5;
+                .mainText2 {
+                    letter-spacing: 28.5px;
+                }
+                .mainText3 {
+                    letter-spacing: 19px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .main {
         .mainBg{
             span {
-                font-size: 56px;
-                line-height: 0.9;
+                font-size: 25px;
+                line-height: 1.5;
                 text-shadow: 4px 4px 2px #ffffff;
                 .mainText2 {
-                    letter-spacing: 11.5px;
+                    letter-spacing: 12.8px;
                 }
                 .mainText3 {
-                    letter-spacing: 7px;
+                    letter-spacing: 8px;
                 }
             }
         }

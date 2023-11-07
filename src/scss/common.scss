@@ -16,8 +16,7 @@ header {
     .logoBtn,.contactBtn {
         a {
             display: block;
-            margin-top: 15px;
-            font-size: 50px;
+            font-size: 25px;
         }
     }
 
@@ -168,6 +167,14 @@ header {
 }
 
 @media screen and (max-width: 1280px) {
+    /* header {
+        .logoBtn,.contactBtn {
+            a {
+                font-size: 5vw;
+            }
+        }
+    } */
+
     .menu {
         &.open {
             display: block;
@@ -192,8 +199,7 @@ header {
         padding: 0 18px;
         .logoBtn,.contactBtn {
             a {
-                margin-top: 15px;
-                font-size: 45px;
+                font-size: 4.5vw;
             }
         }
     

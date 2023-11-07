@@ -15,9 +15,9 @@ const Main = () => {
         <section className="page main">
             <div className="mainBg">
                 <span className="mainText">
-                    <span className="mainText1">FRONT-END DEV</span> <br />
-                    <span className="mainText2">IM SUHEE</span> <br />
-                    <span className="mainText3">PORTFOLIO</span>
+                    <span className="mainText1 bookk">FRONT-END DEV</span> <br />
+                    <span className="mainText2 bookk">IM SUHEE</span> <br />
+                    <span className="mainText3 bookk">PORTFOLIO</span>
                 </span>
             </div>
 

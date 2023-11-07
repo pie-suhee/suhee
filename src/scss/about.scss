@@ -105,7 +105,7 @@
         position: sticky;
         top: 70px;
         span {
-          font-size: 10vw;
+          font-size: 5vw;
         }
       }
     }
@@ -155,7 +155,7 @@
       .skillLeft {
         .title {
           span {
-            font-size: 130px;
+            font-size: 80px;
           }
         }
       }
@@ -199,6 +199,9 @@
       .skillLeft {
         .title {
           height: auto;
+          span {
+            font-size: 9vw;
+          }
         }
       }
       .skillRight {
@@ -231,12 +234,12 @@
       }
     }
     .section2 {
-      gap: 100px;
+      gap: 60px;
       width: 85%;
       .skillLeft {
         .title {
           span {
-            font-size: 50px;
+            font-size: 30px;
           }
         }
       }

@@ -15,7 +15,7 @@ const Skill = () => {
         <section className="section section2">
             <div className="skillLeft">
                 <div className="title">
-                    <span className="Thesignature">
+                    <span className="bookk">
                         Technologies <br />
                         I Use
                     </span>

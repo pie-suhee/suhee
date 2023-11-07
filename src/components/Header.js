@@ -40,8 +40,8 @@ const Header = () => {
         <>
             <header>
                 <div className="logoBtn">
-                    <Link to="/" className="Thesignature" onClick={sideMenu}>
-                        suhee
+                    <Link to="/" className="bookk" onClick={sideMenu}>
+                        SUHEE
                     </Link>
                 </div>
                 
@@ -51,8 +51,8 @@ const Header = () => {
                 </div>
 
                 <div className="contactBtn">
-                    <Link to="/about" className="Thesignature" onClick={sideMenu}>
-                        about
+                    <Link to="/about" className="bookk" onClick={sideMenu}>
+                        ABOUT
                     </Link>
                 </div>
             </header>
