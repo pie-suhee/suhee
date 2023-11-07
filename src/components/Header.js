@@ -1,104 +1,126 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-    useEffect(() => {
-        if (menuOpen) {
-            document.body.classList.add('main_page');
-        } else {
-            document.body.classList.remove('main_page');
-        }
-
-        return () => {
-            document.body.classList.remove('main_page');
-        };
-    }, [menuOpen]);
-
-    const sideMenu = () => {
-        setMenuOpen(false);
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("main_page");
+    } else {
+      document.body.classList.remove("main_page");
     }
 
-    const [activeItem, setActiveItem] = useState(null);
-    
-    const handleCopyClipBoard = async (text, index) => {
-        try {
-            await navigator.clipboard.writeText(text);
-            setActiveItem(index);
-            setTimeout(() => setActiveItem(null), 700);
-        } catch (e) {
-            alert('복사에 실패하였습니다');
-        }
+    return () => {
+      document.body.classList.remove("main_page");
     };
+  }, [menuOpen]);
 
-    return (
-        <>
-            <header>
-                <div className="logoBtn">
-                    <Link to="/" className="bookk" onClick={sideMenu}>
-                        SUHEE
-                    </Link>
-                </div>
-                
-                <div className={`menu-icon ${menuOpen ? 'open' : 'close'}`} onClick={toggleMenu}>
-                    <div className="menu-line menu-line-1"></div>
-                    <div className="menu-line menu-line-2"></div>
-                </div>
+  const sideMenu = () => {
+    setMenuOpen(false);
+  };
 
-                <div className="contactBtn">
-                    <Link to="/about" className="bookk" onClick={sideMenu}>
-                        ABOUT
-                    </Link>
-                </div>
-            </header>
+  const [activeItem, setActiveItem] = useState(null);
 
-            <div className={`menu ${menuOpen ? 'open' : 'close'}`}>
-                <div className="menuLeft">
-                    <ul>
-                        <li>
-                            <Link to="/about" onClick={toggleMenu}>
-                                ABOUT /
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/responsiveWeb" onClick={toggleMenu}>
-                                RESPONSIVE WEB /
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/javascript" onClick={toggleMenu}>
-                                JAVASCRIPT /
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+  const handleCopyClipBoard = async (text, index) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setActiveItem(index);
+      setTimeout(() => setActiveItem(null), 700);
+    } catch (e) {
+      alert("복사에 실패하였습니다");
+    }
+  };
 
-                <div className="menuRight">
-                    <ul>
-                        <li className={`call ${activeItem === 0 ? 'click' : ''}`} onClick={() => {handleCopyClipBoard('01072272783', 0)}}>
-                            <img src="/icon/phoneIcon.png" alt="전화번호"/>
-                        </li>
-                        <li className={`mail ${activeItem === 1 ? 'click' : ''}`} onClick={() => {handleCopyClipBoard('suheeim314@gmail.com', 1)}}>
-                            <img src="/icon/mailIcon.png" alt="메일주소"/>
-                        </li>
-                        <li className={`adress ${activeItem === 2 ? 'click' : ''}`} onClick={() => {handleCopyClipBoard('서울특별시 송파구 오금동', 2)}}>
-                            <img src="/icon/adressIcon.png" alt="집주소"/>
-                        </li>
-                        <li className="github">
-                            <a href="https://github.com/pie-suhee" target="_blank" rel="noreferrer">
-                                <img src="/icon/githubIcon.png" alt="github"/>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <header>
+        <div className="logoBtn">
+          <Link to="/" onClick={sideMenu}>
+            SUHEE
+          </Link>
+        </div>
+
+        <div
+          className={`menu-icon ${menuOpen ? "open" : "close"}`}
+          onClick={toggleMenu}
+        >
+          <div className="menu-line menu-line-1"></div>
+          <div className="menu-line menu-line-2"></div>
+        </div>
+
+        <div className="contactBtn">
+          <Link to="/about" onClick={sideMenu}>
+            ABOUT
+          </Link>
+        </div>
+      </header>
+
+      <div className={`menu ${menuOpen ? "open" : "close"}`}>
+        <div className="menuLeft">
+          <ul>
+            <li>
+              <Link to="/about" onClick={toggleMenu}>
+                ABOUT /
+              </Link>
+            </li>
+            <li>
+              <Link to="/responsiveWeb" onClick={toggleMenu}>
+                RESPONSIVE WEB /
+              </Link>
+            </li>
+            <li>
+              <Link to="/javascript" onClick={toggleMenu}>
+                JAVASCRIPT /
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="menuRight">
+          <ul>
+            <li
+              className={`call ${activeItem === 0 ? "click" : ""}`}
+              onClick={() => {
+                handleCopyClipBoard("01072272783", 0);
+              }}
+            >
+              <img src="/icon/phoneIcon.png" alt="전화번호" />
+            </li>
+            <li
+              className={`mail ${activeItem === 1 ? "click" : ""}`}
+              onClick={() => {
+                handleCopyClipBoard("suheeim314@gmail.com", 1);
+              }}
+            >
+              <img src="/icon/mailIcon.png" alt="메일주소" />
+            </li>
+            <li
+              className={`adress ${activeItem === 2 ? "click" : ""}`}
+              onClick={() => {
+                handleCopyClipBoard("서울특별시 송파구 오금동", 2);
+              }}
+            >
+              <img src="/icon/adressIcon.png" alt="집주소" />
+            </li>
+            <li className="github">
+              <a
+                href="https://github.com/pie-suhee"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/icon/githubIcon.png" alt="github" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Header;
