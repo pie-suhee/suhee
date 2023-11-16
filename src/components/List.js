@@ -29,40 +29,36 @@ const List = ({ category }) => {
 
   return (
     <section className="page list">
-      <div className="category">
-        <div className="subTitle">
-          <span className="text">{category}</span>
-          <span className="scroll">scroll down 👇</span>
-        </div>
+      <div className="subTitle">
+        <span className="text" data-splitting="words">
+          {category}
+        </span>
       </div>
-      <div className="list_con">
-        <div className="cityBg">
-          <img src="/cityBg.png" alt="도시 이미지" />
-        </div>
-        <ul>
-          {projects.map((project, index) => {
-            const formattedIndex = (index + 1).toString().padStart(2, "0");
+      {projects.map((project, idx) => {
+        const words = project.title;
 
-            return (
-              <li key={project.id}>
-                <div className="listBg">
-                  <img src={project.src} alt="리스트 배경 이미지" />
-                </div>
+        return (
+          <div className="panel" data-key={idx+1}>
+            <h2 className="words" data-splitting="words" style={{ '--word-total': words.length }}>
+              {words.map((word, wordIndex) => (
+                <React.Fragment key={wordIndex}>
+                  <span className="word" data-word={word} style={{ '--word-index': wordIndex }}>
+                    {word}
+                  </span>
+                  {wordIndex < words.length - 1 && <span className="whitespace"> </span>}
+                </React.Fragment>
+              ))}
+            </h2>
+              <div className="thumb">
                 <a href={project.href} target="_blank" rel="noreferrer">
-                  <div className="listTitle">
-                    <span>{project.title}</span>
-                    <span>/{formattedIndex}</span>
-                  </div>
-
-                  <div className="listDescription">
-                    <span>{project.description}</span>
+                  <div className="inner">
+                    <img className="invert" loading="lazy" src={project.src} alt=""/>
                   </div>
                 </a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+              </div>
+          </div>
+        );
+      })}
     </section>
   );
 };

@@ -111,7 +111,7 @@
     }
     .skillRight {
       flex: 1;
-      .list {
+      .skillList {
         display: grid;
         grid-column-gap: 1.2em;
         grid-row-gap: 1.2em;
@@ -160,7 +160,7 @@
         }
       }
       .skillRight {
-        .list {
+        .skillList {
           .listItem {
             div {
               width: 50%;
@@ -205,7 +205,7 @@
         }
       }
       .skillRight {
-        .list {
+        .skillList {
           .listItem {
             div {
               width: 70%;
@@ -244,7 +244,7 @@
         }
       }
       .skillRight {
-        .list {
+        .skillList {
           .listItem {
             div {
               padding: 1vw;

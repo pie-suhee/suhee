@@ -19,7 +19,7 @@ const Skill = () => {
         </div>
       </div>
       <div className="skillRight">
-        <div className="list">
+        <div className="skillList">
           <div className="listItem">
             <div className="html">
               <FontAwesomeIcon icon={faHtml5} style={{ color: "#ff5722" }} />
