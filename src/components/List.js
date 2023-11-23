@@ -5,6 +5,16 @@ import "../scss/list.scss";
 const projectURL = "/project.json";
 
 const List = ({ category }) => {
+  const [prevCategory, setPrevCategory] = useState(category);
+
+  useEffect(() => {
+    if (category !== prevCategory) {
+      window.location.reload();
+    }
+
+    setPrevCategory(category);
+  }, [category, prevCategory]);
+
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -30,9 +40,11 @@ const List = ({ category }) => {
   return (
     <section className="page list">
       <div className="subTitle">
-        <span className="text" data-splitting="words">
-          {category}
-        </span>
+        <svg viewBox="0 0 900 300">
+          <text x="50%" y="50%" dy="40px" text-anchor="middle">
+            {category}
+          </text>
+        </svg>
       </div>
       {projects.map((project, idx) => {
         const words = project.title;
