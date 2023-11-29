@@ -20,7 +20,7 @@ const MouseMove = () => {
     const handleOnMove = (e) => {
         if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / 20) {
             const lead = images[globalIndex % images.length];
-            const tail = images[(globalIndex - 4) % images.length];
+            const tail = images[(globalIndex - 3) % images.length];
 
             activate(lead, e.clientX, e.clientY);
 
@@ -40,7 +40,7 @@ const MouseMove = () => {
 
     const imageElements = [];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 1; i < 5; i++) {
       imageElements.push(
         // eslint-disable-next-line jsx-a11y/alt-text
         <img

@@ -10,7 +10,7 @@
     {
         "id": 2,
         "title": ["Video", "App"],
-        "category": "RESPONSIVE WEB",
+        "category": "없음",
         "description": "회원가입, 로그인, 동영상 업로드, 댓글, 좋아요, 구독 등의 기능을 구현하였으며, MongoDB, Postman을 활용하여 RESTful API 요청 메서드(GET, POST 등)의 흐름을 확인하였습니다.",
         "src": "/listBg/videoappBg.png",
         "href": "http://3.18.212.70/"
