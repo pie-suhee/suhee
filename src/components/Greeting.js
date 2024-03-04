@@ -120,7 +120,7 @@ const Greeting = () => {
   }, []);
 
   const completedText =
-    "안녕하세요. :) \n React 기반의 프론트엔드 개발자 임수희입니다. \n Figma (Zeplin) 와 Adobe Photoshop을 활용하여 디자이너와 원활하게 소통하고 TeamUP, Slack과 같은 협업 도구를 이용하여 프로젝트에 소통부재로 인한 오류사항이 없도록 노력하겠습니다. \n 감사합니다.";
+    "안녕하세요. :) \n 프론트엔드 개발자 임수희입니다. \n Figma (Zeplin) 와 Adobe Photoshop을 활용하여 디자이너와 원활하게 소통하고 프로젝트에 소통부재로 인한 오류사항이 없도록 노력하겠습니다. \n 감사합니다.";
   const textLines = completedText.split("");
 
   const [greetingsText, setGreetingsText] = useState([]);
