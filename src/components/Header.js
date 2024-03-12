@@ -107,7 +107,7 @@ const Header = () => {
             >
               <img src="/icon/adressIcon.png" alt="집주소" />
             </li>
-            <li className="github">
+            {/* <li className="github">
               <a
                 href="https://github.com/pie-suhee"
                 target="_blank"
@@ -115,7 +115,7 @@ const Header = () => {
               >
                 <img src="/icon/githubIcon.png" alt="github" />
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
